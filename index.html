@@ -19,17 +19,6 @@
             min-height: 100vh; /* fills the viewport height */
         }
 
-        /*Code copied from: https://www.youtube.com/watch?v=FEmysQARWFU
-Author: Kevin Powell
-Name: Navigation bar without JS
-Description: I know how to make a tool/navigation bar and list using <a>,
-      as per assignment specifications, butwanted some
-      animations, and used this video.
-Date retrieved: Dec. 8, 2023
--->
-
-<!-- Copied code starts -->*/
-
         .container {
             width: 80%;
             margin: 0 auto;
@@ -37,7 +26,7 @@ Date retrieved: Dec. 8, 2023
 
         header {
             width: 100%;
-          	padding: 0;
+            padding: 0;
             background: #55d6aa;
             position: fixed;
             top: 0;
@@ -64,7 +53,7 @@ Date retrieved: Dec. 8, 2023
             display: inline-block;
             margin-left: 70px;
             padding-top: 15px;
-          	padding-bottom: 15px;
+            padding-bottom: 15px;
             position: relative;
         }
 
@@ -93,8 +82,6 @@ Date retrieved: Dec. 8, 2023
         nav a:hover::before {
             width: 100%;
         }
-      
-      /* copied code ends */
 
         h1 {
             font-size: 24px;
@@ -108,6 +95,9 @@ Date retrieved: Dec. 8, 2023
         }
 
         section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             max-width: 800px;
             margin: 4em auto; /* Adjusted margin for better centering */
             padding: 0 20px;
@@ -117,10 +107,6 @@ Date retrieved: Dec. 8, 2023
             position: relative; /* position relative for z-index stacking */
             z-index: 0;
         }
-      
-      	img {
-        	width: 80%
-      	}
 
         .project-tile {
             background-size: cover;
@@ -130,8 +116,7 @@ Date retrieved: Dec. 8, 2023
             margin-bottom: 20px;
             border-radius: 8px; /* Added rounded corners for better aesthetics */
             color: #fff; /* White text color for better contrast */
-            width: 48%; /* Set the width to 48% to create a 2x2 grid with a small gap between tiles */
-            display: inline-block; /* Display tiles inline */
+            width: 30%; /* Set the width to 30% to create a 3x2 grid with a small gap between tiles */
             box-sizing: border-box;
         }
 
@@ -151,7 +136,15 @@ Date retrieved: Dec. 8, 2023
         .project-4 {
             background-image: url('https://via.placeholder.com/800x400');
         }
-  
+
+        .project-5 {
+            background-image: url('https://via.placeholder.com/800x400');
+        }
+
+        .project-6 {
+            background-image: url('https://via.placeholder.com/800x400');
+        }
+
   /*Code copied from: https://www.youtube.com/watch?v=Y4hg9PCHHfI
 Author: Anna Blok
 Name: Pop-up without needing JS
@@ -159,75 +152,75 @@ Description: Displays a pop-up screen, using styling found in CSS
 Date retrieved: Dec. 9, 2023-->
 
 <!-- Copied code starts -->*/
-      	a {
-   				color: #fff;
-   				text-decoration: none;
-				}
-				.btn {
-   				padding: 15px 45px;
-   				border: 1px solid #fff;
-   				border-radius: 0.5em;
-   				display: inline-block;
-   				margin-top: 2em;
-   				background-color: transparent;
-   				font-weight: 700;
-   				transition: .3s;
-				}
-				.btn:hover {
-  				background-color: #fff;
-   				color: #222;
-				}
-				.popup {
-   				position: fixed;
-   				padding: 10px;
-   				max-width: 500px;
-   				border-radius: 0.5em;
-   				top: 50%;
-   				left: 50%;
-   				color: #000;
-   				transform: translate(-50%, -50%);
-   				background-color: rgba(255,255,255,1);
-   				visibility: hidden;
-   				opacity: 0;
-   				transition: opacity .5s, visibility 0s linear .5s;
-   				z-index: 1;
-				}
-				.popup:target {
-   				visibility: visible;
-  				opacity: 1;
-   				transition-delay: 0s;
-				}
-				.popup .close {
-   				position: absolute;
-   				right: 5px;
-   				top: 5px;
-   				padding: 5px;
-   				color: #000;
-   				transition: color .3s;
-   				font-size: 2em;
-   				line-height: 1.5;
-   				font-weight: 700;
-				}
-				.popup .close:hover {
-   				color: #f00;
-				}
-				.close-popup {
-   				background-color: rgba(0,0,0,.7);
-   				cursor: default;
-   				position: fixed;
-   				top:0;
-   				left:0;
-   				right:0;
-   				bottom:0;
-   				opacity: 0;
-   				visibility: hidden;
-   				transition: opacity .5s, visibility 0s linear .5s;
-				}
-				.popup:target + .close-popup {
-   				opacity: 1;
-   				visibility: visible;
-   				transition-delay: 0s;
-				}
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .btn {
+            padding: 15px 45px;
+            border: 1px solid #fff;
+            border-radius: 0.5em;
+            display: inline-block;
+            margin-top: 2em;
+            background-color: transparent;
+            font-weight: 700;
+            transition: .3s;
+        }
+        .btn:hover {
+            background-color: #fff;
+            color: #222;
+        }
+        .popup {
+            position: fixed;
+            padding: 10px;
+            max-width: 500px;
+            border-radius: 0.5em;
+            top: 50%;
+            left: 50%;
+            color: #000;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255,255,255,1);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .5s, visibility 0s linear .5s;
+            z-index: 1;
+        }
+        .popup:target {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+        .popup .close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 5px;
+            color: #000;
+            transition: color .3s;
+            font-size: 2em;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+        .popup .close:hover {
+            color: #f00;
+        }
+        .close-popup {
+            background-color: rgba(0,0,0,.7);
+            cursor: default;
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .5s, visibility 0s linear .5s;
+        }
+        .popup:target + .close-popup {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: 0s;
+        }
       /*<!-- Copied code ends -->*/
 
         footer {
@@ -272,14 +265,14 @@ Description: Displays a pop-up screen, using styling found in CSS
 Date retrieved: Dec. 9, 2023-->
 
 <!-- Copied code starts -->
-					<a href="#popup1" class="btn">See more</a>
-					<div id="popup1" class="popup">
-   					<a href="#" class="close">&times;</a>
-   					<h2>D&D Character Design</h2>
-            <IMG SRC="https://media.discordapp.net/attachments/871040939156721724/970367061236781107/IMG_8162.gif">
-   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<a href="#" class="close-popup"></a>
+                    <a href="#popup1" class="btn">See more</a>
+                    <div id="popup1" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>D&D Character Design</h2>
+                        <img src="https://media.discordapp.net/attachments/871040939156721724/970367061236781107/IMG_8162.gif" alt="D&D Character Design">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
 <!-- Copied code ends -->
         </div>
       
@@ -292,13 +285,14 @@ Description: Displays a pop-up screen, using styling found in CSS
 Date retrieved: Dec. 9, 2023-->
 
 <!-- Copied code starts -->
-					<a href="#popup" class="btn">Click Here</a>
-					<div id="popup" class="popup">
-   					<a href="#" class="close">&times;</a>
-   					<h2>Title Popup</h2>
-   					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<a href="#" class="close-popup"></a>
+                    <a href="#popup2" class="btn">Click Here</a>
+                    <div id="popup2" class="popup">
+                        <a href="#" class="close">&times;</a>
+                        <h2>Partners with Paws Documentary</h2>
+                        <img src="https://via.placeholder.com/800x400" alt="Partners with Paws Documentary">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <a href="#" class="close-popup"></a>
 <!-- Copied code ends -->
         </div>
 
@@ -311,6 +305,16 @@ Date retrieved: Dec. 9, 2023-->
             <h2>Project 4</h2>
             <p>Description of Project 4 goes here.</p>
         </div>
+
+        <div class="project-tile project-5">
+            <h2>Project 5</h2>
+            <p>Description of Project 5 goes here.</p>
+        </div>
+
+        <div class="project-tile project-6">
+            <h2>Project 6</h2>
+            <p>Description of Project 6 goes here.</p>
+        </div>
     </section>
 
     <footer>
@@ -319,3 +323,4 @@ Date retrieved: Dec. 9, 2023-->
 
 </body>
 </html>
+
